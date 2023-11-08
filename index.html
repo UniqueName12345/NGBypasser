@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js"></script>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- add a text box with label "ID" -->
+        <div class="container">
+            <div class="row">
+                <div class="col">ID</div>
+                <div class="col"><input type="text" id="id"></div>
+            </div>
+            <!-- add a text box with label "Audio Name" -->
+            <div class="row">
+                <div class="col">Audio Name</div>
+                <div class="col"><input type="text" id="name"></div>
+            </div>
+            <!-- add a button -->
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const button = document.querySelector('button');
+            button.addEventListener('click', () => {
+                const id = document.querySelector('#id').value;
+                const name = document.querySelector('#name').value;
+                downloadSong(id, name);
+            })
+        </script>
+</html>
